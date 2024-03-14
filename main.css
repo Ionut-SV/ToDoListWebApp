@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(28, 153, 215);
+}
+
+header {
+  padding: 16px 8px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top:250px;
+}
+
+header h1 {
+  font-size: 5vh;
+  font-weight: 300;
+  color: azure;
+  margin-bottom: 64px;
+  margin-left:240px;
+}
+
+#new-task-form {
+  display: flex;
+}
+input{
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button{
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-task-input {
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 40px;
+  margin-right: 40px;
+  color: rgb(0, 0, 0);
+  font-size: 3vh;
+}
+
+#new-task-input::placeholder {
+  color: rgb(41, 152, 156);
+}
+
+#new-task-submit{
+  color:rgb(101, 0, 163);
+  font-size: 2vh;
+  font-weight: 700;
+  cursor:pointer;
+  transition:0.4s;
+  margin-top:8px;
+  margin-left:-40px;
+}
+
+#new-task-submit:hover{
+  opacity: 0.9;
+}
+
+#new-task-submit:active{
+  opacity: 0.5;
+}
+
+#delete-all-tasks{
+  color:rgb(136, 36, 36);
+  font-size: 2vh;
+  font-weight: 700;
+  cursor:pointer;
+  transition:0.4s;
+  margin-top:8px;
+  margin-left: 8px;
+}
+
+#delete-all-tasks:hover{
+  opacity: 0.9;
+}
+
+#delete-all-tasks:active{
+  opacity: 0.5;
+}
+
+#complete-all-tasks{
+  color:rgb(101, 0, 163);
+  font-size: 2vh;
+  font-weight: 700;
+  cursor:pointer;
+  transition:0.4s;
+  margin-top:8px;
+  margin-left:-100px;
+}
+
+#complete-all-tasks:hover{
+  opacity: 0.9;
+}
+
+#complete-all-tasks:active{
+  opacity: 0.5;
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#show-all-tasks{
+  display: inline-block;
+  color:rgb(101, 0, 163);
+  font-size: 2vh;
+  font-weight: 700;
+  cursor:pointer;
+  transition:0.4s;
+  margin-top:8px;
+}
+
+#show-all-tasks:hover{
+  opacity: 0.9;
+}
+
+#show-all-tasks:active{
+  opacity: 0.5;
+}
+
+#show-completed-tasks{
+  
+  color:darkgreen;
+  font-size: 2vh;
+  font-weight: 700;
+  cursor:pointer;
+  transition:0.4s;
+  margin-top:8px;
+}
+
+#show-completed-tasks:hover{
+  opacity: 0.9;
+}
+
+#show-completed-tasks:active{
+  opacity: 0.5;
+}
+
+#show-ongoing-tasks{
+  color:rgb(101, 0, 163);
+  font-size: 2vh;
+  font-weight: 700;
+  cursor:pointer;
+  transition:0.4s;
+  margin-top:8px;
+}
+
+#show-ongoing-tasks:hover{
+  opacity: 0.9;
+}
+#show-ongoing-tasks:active{
+  opacity: 0.5;
+}
+
+main {
+  flex: 1 1 0%;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.task-list {
+  padding: 8px;
+}
+
+.task-list h2 {
+  font-size: 3vh;
+  font-weight: 300;
+  color: aliceblue;
+  margin-bottom: 8px;
+}
+
+#counter-text {
+  font-size: 3vh;
+  font-weight: 300;
+  color: aliceblue;
+  margin-bottom: 8px;
+}
+
+#task-counter {
+  font-size: 3vh;
+  font-weight: 300;
+  color: aliceblue;
+  margin-bottom: 8px;
+}
+
+#tasks .task{
+  display: flex;
+  justify-content: space-between;
+  background-color: aliceblue;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+#completed-tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: aliceblue;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+#completed-tasks .task {
+  background-color: rgba(53, 152, 23, 0.3);
+}
+
+.completed .content input {
+  text-decoration: line-through;
+  color: brown;
+}
+
+.task .content {
+  flex: 1 1 0%;
+}
+
+.task .content .text {
+  font-size: 2vh;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+  color: brown;
+}
+
+.task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.task .actions button {
+  cursor: pointer;
+  margin: 0 4px;
+  font-size: 2vh;
+  font-weight: 700;
+  transition: 0.4s;
+}
+
+.task .actions button:hover {
+  opacity: 0.9;
+}
+
+.task .actions button:active {
+  opacity: 0.5;
+}
+
+.task .actions .edit {
+  color: rgb(101, 0, 163);
+}
+
+.task .actions .delete {
+  color: rgb(197, 12, 49);
+}
+
+.show-completed-tasks #completed-tasks {
+  display: block;
+}
+
+.show-ongoing-tasks #ongoing-tasks {
+  display: block;
+}

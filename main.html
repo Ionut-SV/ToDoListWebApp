@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO List</title>
+
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+<header>
+    <h1>TO DO List</h1>
+    <form id="new-task-form">
+        <input 
+            type="text" 
+            name="new-task-input" 
+            id="new-task-input" 
+            placeholder="What do you have planned?" />
+        <input 
+            type="submit"
+            id="new-task-submit" 
+            value="Add task" />
+		<input
+			type="delete_all"
+			id="delete-all-tasks"
+			value="Delete All Tasks"/>
+		<input
+			type="complete_all"
+			id="complete-all-tasks"
+			value="Complete All Tasks"/>
+    </form>
+        <div class="buttons-container">
+            <input
+                type="button"
+                id="show-all-tasks"
+                value="All Tasks"/>
+            <input
+                type="button"
+                id="show-completed-tasks"
+                value="Completed Tasks"/>
+            <input
+                type="button"
+                id="show-ongoing-tasks"
+                value="Ongoing Tasks"/>
+        </div>    
+</header>
+<main>
+    <section class="task-list" id="tasks-section">
+        <h2>Number of Tasks: <span id="task-counter">0</span></h2><br>
+		<h2>Tasks</h2>
+        <div id="tasks">
+        </div>
+    </section>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
